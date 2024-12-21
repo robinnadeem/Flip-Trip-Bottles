@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottle Filling Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 id="gameTitle">Bottle Filling Game</h1>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p>Level: <span id="level">1</span></p>
+        </div>
+        <div class="bottles">
+            <div class="bottle" data-color="red"></div>
+            <div class="bottle" data-color="green"></div>
+            <div class="bottle" data-color="blue"></div>
+            <div class="bottle" data-color="yellow"></div>
+        </div>
+        <div class="colors">
+            <button class="color-btn" style="background-color: red;"></button>
+            <button class="color-btn" style="background-color: green;"></button>
+            <button class="color-btn" style="background-color: blue;"></button>
+            <button class="color-btn" style="background-color: yellow;"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
