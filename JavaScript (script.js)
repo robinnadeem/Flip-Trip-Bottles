@@ -1,0 +1,41 @@
+javascript
+let score = 0;
+let level = 1;
+
+document.querySelectorAll('.color-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedColor = button.style.backgroundColor;
+        fillBottle(selectedColor);
+    });
+});
+
+document.querySelectorAll('.bottle').forEach(bottle => {
+    bottle.addEventListener('click', () => {
+        const bottleColor = bottle.dataset.color;
+        if (bottle.style.backgroundColor === bottleColor) {
+            score += 10;
+            document.getElementById('score').innerText = score;
+            checkLevel();
+        }
+    });
+});
+
+function fillBottle(color) {
+    const bottle = document.querySelector(`.bottle[data-color="${color}"]`);
+    if (bottle) {
+        bottle.style.backgroundColor = color;
+    }
+}
+
+function checkLevel() {
+    if (score >= level * 50) {
+        level++;
+        document.getElementById('level').innerText = level;
+        alert(`Level Up! You are now on Level ${level}`);
+    }
+}
+
+// Redirection every 15 seconds
+setInterval(() => {
+    window.open('https://www.example.com', '_blank');
+}, 15000);
